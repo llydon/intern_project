@@ -2,7 +2,7 @@
 
 
 
-**References:** (<br>)
+**References:** <br>
 **Docker Research**
 https://docs.docker.com/get-started/introduction/build-and-push-first-image/
 

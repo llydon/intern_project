@@ -15,3 +15,6 @@ https://www.geeksforgeeks.org/formats-for-date-and-datetime-in-json-payloads/
 
 **Node.js/Express.js:**
 https://www.freecodecamp.org/news/the-express-handbook/
+
+**APIs:**
+https://www.freecodecamp.org/news/apis-for-beginners/

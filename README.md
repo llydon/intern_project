@@ -16,5 +16,8 @@ https://www.geeksforgeeks.org/formats-for-date-and-datetime-in-json-payloads/
 **Node.js/Express.js:**
 https://www.freecodecamp.org/news/the-express-handbook/
 
+https://stackoverflow.com/questions/34385499/how-to-create-json-object-node-js
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
 **APIs:**
 https://www.freecodecamp.org/news/apis-for-beginners/

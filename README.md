@@ -6,6 +6,7 @@
 **Docker:**
 https://docs.docker.com/get-started/introduction/build-and-push-first-image/
 https://docs.docker.com/reference/dockerfile/
+https://docs.docker.com/guides/nodejs/containerize/
 
 **JavaScript:**
 https://stackoverflow.com/questions/16507222/create-json-object-dynamically-via-javascript-without-concate-strings

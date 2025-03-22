@@ -3,7 +3,7 @@ const app = express();
 //Express is the web server
 
 //PortNum is going to be 3000 now for default testing. Might need to make changes for use with Docker.
-const portNum = 3000;
+const portNum = process.env.PORT || 50404; //Port will dynamically change depending on the assigment from the server.
 
 //Timestamp will use the unix format
 const timeStamp = Math.floor(new Date().getTime() / 1000);
@@ -14,12 +14,12 @@ const output = {
 };
 //Had to move the JSON object to be defined before it is called.
 app.get('/', (req, res) => {
-    res.set('json', 'application/json'); //this will change the HTTP header to JSON
-    res.send(output);
+    res.set('Content-Type', 'application/json'); //this will change the HTTP header to JSON
+    res.json(output);
 });
 //request to the server and response from the server. Response should be the JSON object.
 //once the string is sent the connection is closed.
-app.listen(portNum, () => console.log('Server ready at ', {$portNum})); //example of server check for use with docker.
+//app.listen(portNum, () => {console.log('Server ready at http://localhost:{$portNum}')}); //example of server check for use with docker.
 //It may need to check ports to verify communication with the server.
 //This should listen in at the given port# and then responds with a message to console. 
 

@@ -1,4 +1,4 @@
-name: Docker_PI
+name: Docker_PI_AWS_ECR
 
 on:
   push:
@@ -9,10 +9,27 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_OTHER_ACCESS_KEY }}
+        aws-region: us-west-2
+
+    - name: Log in to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-west-2.amazonaws.com
+
+    - name: Build Docker Image
+      run: |
+        docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-west-2.amazonaws.com/intern_project:latest .
+
+    - name: Push Docker Image to ECR
+      run: |
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-west-2.amazonaws.com/intern_project:latest

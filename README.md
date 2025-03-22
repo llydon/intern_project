@@ -22,3 +22,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **APIs:**
 https://www.freecodecamp.org/news/apis-for-beginners/
+
+**AWS:**
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+https://aws.amazon.com/docker/#:~:text=Run%20Docker%20on%20AWS,processing%20workloads%20using%20Docker%20containers.

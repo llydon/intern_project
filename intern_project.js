@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 //request to the server and response from the server. Response should be the JSON object.
 //once the string is sent the connection is closed.
-app.listen(portNum, () => {console.log('Server ready at http://localhost: ', portNum)}); //example of server check for use with docker.
+app.listen(portNum, '0.0.0.0', () => {console.log('Server ready at http://localhost: ', portNum)}); //example of server check for use with docker.
 //It may need to check ports to verify communication with the server.
 //This should listen in at the given port# and then responds with a message to console. 
 

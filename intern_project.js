@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 //request to the server and response from the server. Response should be the JSON object.
 //once the string is sent the connection is closed.
 app.listen(portNum, '0.0.0.0', () => {console.log('Server is running on port ', portNum)}); //example of server check for use with docker.
-//It may need to check ports to verify communication with the server.
+//It may need to check ports to verify communication with the server. Updated with default ip.
 //This should listen in at the given port# and then responds with a message to console. 
 
 //Another possible way for the outut to be printed, still think Express is the way to go.

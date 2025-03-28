@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     //Timestamp will use the unix format
     const timeStamp = Math.floor(new Date().getTime() / 1000);
     const output = {
-        "message": "My name is Lindsey Lydon",
+        "message": "My name is Lindsey A Lydon",
         "timestamp": timeStamp
     };
     res.set('Content-Type', 'application/json'); //this will change the HTTP header to JSON
